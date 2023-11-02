@@ -1,0 +1,19 @@
+<html>
+<body>
+<img src="" id="testImage" width="0px" height="0px"><br><br>
+<span onmouseover="show(0)" style="cursor: pointer;">
+Cake
+</span><br><br>
+<span onmouseover="show(1)" style="cursor: pointer;">
+Cupcake
+</span><br><br>
+<span onmouseover="show(2)" style="cursor: pointer;">
+Donut
+</span><br><br>    
+<script>
+var myImages = ['C:\Users\dell\Desktop\MISSION CSS\IMG\col-2-img-1.jpg','C:\Users\dell\Desktop\MISSION CSS\IMG\col-2-img-2.jpg','C:\Users\dell\Desktop\MISSION CSS\IMG\col-2-img-3.jpg']
+            function show(x) {    document.getElementById('testImage').src = myImages[x]          document.getElementById('testImage').style.height = '150px'               document.getElementById('testImage').style.width = '150px'
+ }
+</script>
+ </body>
+</html>

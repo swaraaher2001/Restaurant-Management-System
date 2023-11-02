@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+
+    <style>
+        .myslide{
+           
+            display:none;
+        }
+
+       
+
+        .image7{
+            width: 20%;
+            height: 20%;
+            padding: 8px 12px;
+            position: absolute;
+            top: 35px;
+           left: 85px;
+           border: 2px;
+            
+        }
+
+        .table1
+        {
+            padding: 20px;
+            
+            margin: 10px;
+            position: absolute;
+            top: 35px;
+            left: 500px;
+           border: 2px;
+           cursor: pointer;
+
+        }
+
+        .table1 tr,td{
+            padding: 10px;
+           margin: 5px;
+            justify-content: center;
+        }
+
+        .image3{
+            width: 20%;
+            height: 20%;
+            padding: 8px 12px;
+            position: absolute;
+            top: 35px;
+           left: 145px;
+           border: 2px;
+            
+        }
+
+        .links
+            {
+                border-radius:30px;
+               position: relative;
+               display: inline-block;
+            }
+
+            .links:hover
+            {
+            background-color : orangered;
+            }  
+
+
+        .show{
+            display:block;
+            background-color:transparent;
+        }
+
+
+    </style>
+
+    </head>
+</head>
+
+<body>
+    <div style="max-width: 500px">
+        <img class="myslide" src="home-2-back.jpg" width="220%" height="100%">
+        <img class="myslide" src="counter-up-bg.jpg" width="220%" height="100%">
+        <img class="myslide" src="testimonial-bg.jpg" width="220%" height="100%">
+                </div>
+                <script>
+                var myIndex=0;
+                carousel();
+                    function carousel()
+                    {
+                        var i;
+                        var x=document.getElementsByClassName("myslide");
+                        for(i=0;i<x.length;i++)
+                        {
+                            x[i].style.display="none";
+                        }
+        
+                        myIndex++;
+                        if(myIndex > x.length)
+                        {
+                            myIndex=1
+                        }
+        
+                        x[myIndex-1].style.display="block";
+                        setTimeout(carousel,4000);
+                   }
+                </script>
+        
+                <div class="image7">
+        
+                <img  src="favicon.png">
+                </div>
+                <div class="image3">
+                    <img  src="logo-text.png">
+                 </div>
+                 <script>
+                    function a()
+                    {
+                    window.open("homepage2.html");
+                    
+                    
+                    }
+                    
+                    
+                    
+                    function b()
+                    {
+                    window.open("home33.html");
+                    }
+                    
+                    function c()
+                    {
+                    
+                    window.open("thirdform.html");
+                    }
+                    
+                    function d()
+                    {
+                    
+                    window.open("fourthform.html");
+                    }
+                    
+                    
+                    function e()
+                    {
+                    
+                    window.open("fifth.html");
+                    }
+                    
+                    </script>
+                 <div>
+                    <table class="table1" border="0" width="50%" height="10%">
+                            <tr  >
+                                <td width="12.5%" align="center" class="links" onclick="a()" ><font color="white">Home</font>
+                                
+    
+                                
+                                
+                                </td>
+                                
+                                    <td width="12.5%" align="center" class="links"><font color="white"  >Gallery</font>
+                                       
+                                                                
+                                        
+                                    </td>
+                                   
+    
+                                                                        
+    
+    
+                                    <td width="12.5%" align="center" class="links" onclick="myfunction2()"><font color="white"  >Menu</font>
+                                       
+                                    </td>
+                                    <td width="12.5%" align="center" class="links" onclick="myfunction4()"><font color="white" >Page</font>
+                                        
+                                    </td>
+                                    <td width="12.5%" align="center" class="links" onclick="e()"><font color="white" >Contact</font></td>
+                             </tr>
+                            
+                        </table>
+        
+</body>
+</html>
+
+
+

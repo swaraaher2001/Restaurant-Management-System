@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("5.png");
+            background-size: 1560px 850px;
+            background-repeat: no-repeat;
+        }
+
+        .loginbox,
+        signupbox {
+            display: none;
+            width: 400px;
+            height: 420px;
+            color: #FF437C;
+            top: 60%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            background: rgba(168, 235, 162, 0.829);
+        }
+
+        h1 {
+            font-family: MV Boli, Helvetica, sans-serif;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            0 20px;
+            font size: 5px;
+        }
+
+        p {
+            line-height: 80%;
+            font-family: MV Boli, Helvetica, sans-serif;
+            color: rgb(249, 136, 151);
+            margin-left: 10px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        input {
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            border: none;
+            outline: none;
+            width: 300px;
+            margin-top: 15px;
+            height: 25px;
+        }
+
+        input[type="submit"] {
+            font-family: MV Boli, Helvetica, sans-serif;
+            border-radius: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            height: 30px;
+            width: 180px;
+            font-size: 20px;
+        }
+
+        .loginbox input[type="submit"]:hover {
+            background-color: rgb(115, 115, 255);
+            color: white;
+            cursor: pointer;
+        }
+
+        .signup input[type="submit"]:hover {
+            background-color: rgb(115, 115, 255);
+            color: white;
+            cursor: pointer;
+        }
+
+        a {
+            font-family: MV Boli, Helvetica, sans-serif;
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            padding-top: 6cm;
+            line-height: 80%;
+        }
+
+        .loginbox a:hover {
+            font-family: MV Boli, Helvetica, sans-serif;
+            text-decoration: underline;
+            color: black;
+        }
+
+        .signup a:hover {
+            font-family: MV Boli, Helvetica, sans-serif;
+            text-decoration: underline;
+            color: black;
+        }
+
+        ::placeholder {
+            font-family: Calibri, sans-serif;
+            color: black;
+            text-color: black;
+            margin-left: 30px;
+        }
+
+        #log {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: black;
+            font-family: MV Boli, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+
+        #sig {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: black;
+            font-family: MV Boli, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+
+        hr.line {
+            border: 1px solid white;
+        }
+
+        #reset:hover {
+            font-family: MV Boli, Helvetica, sans-serif;
+            text-decoration: underline;
+            color: black;
+            cursor: pointer;
+        }
+
+        #reset {
+            font-family: MV Boli, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .signupbtn {
+            background-color: #4CAF50;
+            color: white;
+            position: absolute;
+            padding: 14px 20px;
+            margin: 90px;
+            border: none;
+            cursor: pointer;
+            height: 80px;
+            width: 1000px;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            background: transparent;
+            font-size: 40px;
+            font-family: MV Boli, Helvetica, sans-serif;
+            margin-left: 880px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            position: absolute;
+            padding: 14px 20px;
+            margin: 90px;
+            border: none;
+            cursor: pointer;
+            height: 80px;
+            width: 1000px;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            background: transparent;
+            font-size: 40px;
+            font-family: MV Boli, Helvetica, sans-serif;
+            margin-left: 680px;
+        }
+
+        input[type=button] {
+            font-family: MV Boli, Helvetica, sans-serif;
+            border-radius: 10px;
+            background-color:palevioletred;
+            color: white;
+            border: none;
+            height: 30px;
+            width: 180px;
+            font-size: 20px;
+        }
+
+        .loginbtn {
+            background-color: #4CAF50;
+            color: white;
+            position: absolute;
+            padding: 14px 20px;
+            margin: 90px;
+            border: none;
+            cursor: pointer;
+            height: 80px;
+            width: 1000px;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            background: transparent;
+            font-size: 40px;
+            font-family: MV Boli, Helvetica, sans-serif;
+            margin-left: 680px;
+        }
+
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-family: MV Boli, Helvetica, sans-serif;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            0 20px;
+            font size: 5px;
+        }
+
+        p {
+            line-height: 80%;
+            font-family: MV Boli, Helvetica, sans-serif;
+            color: rgb(249, 136, 151);
+            margin-left: 10px;
+        }
+
+        .signup p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .signup input {
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        .signup input[type="submit"]:hover {
+            background-color: rgb(115, 115, 255);
+            color: white;
+            cursor: pointer;
+        }
+
+        .signup a:hover {
+            font-family: MV Boli, Helvetica, sans-serif;
+            text-decoration: underline;
+            color: black;
+        }
+
+        .closea {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .closea:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+  
+</head>
+
+<body onload="myCookie()">
+
+  <script src="validation.js"></script>
+    <button class="loginbtn" onclick="shw1()" style="width:auto;">Login</button>
+
+    <div id="id01" class="loginbox">
+
+        <form>
+            <span onclick="close_signin_button()" class="close">&times;</span>
+
+            <center>
+                <p id="log" style="color:black">Login Here
+                    <hr style="width:300px" class="line">
+            </center>
+
+            <center><input type="text" name="username" placeholder="  Email" id="myUserReg"></center>
+            <center><input type="password" name="pass" placeholder="  Password" id="myPassReg"><label class="myPassReg-error"></label></center><br>
+			
+            <center><input type="button" name="login_button" value="LOGIN" onClick="validateMyUser()"></center><br><br>
+
+
+            <div style="margin-top:75px">
+
+
+            </div>
+
+            <div style="margin-top:75px">
+
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"></span>
+
+            </div>
+
+    </div>
+    </form>
+    </div>
+
+
+    <button class="signupbtn" onclick="shw2()" style="width:auto;"
+        style="margin-left:90px">Signup</button>
+    <div id="id02" class="loginbox">
+
+        <form>
+            <span onclick="close_signup_button()" class="closea">&times;</span>
+
+            <center>
+                <p id="sig" style="color:black">Signup Here
+                    <hr style="width:300px" class="line">
+            </center>
+
+            <center><input type="text" id="myFullName" onblur="checkFullName()" placeholder="  Full Name" /></center>
+            <center><label class="error myFullName-error"></label></center>
+            <center><input type="text" placeholder="  Email" id="myEmailId" onblur="checkEmailId()" /></center>
+            <center><label class="error myEmailId-error"></label></center>
+            <center><input type="password" id="myPassword" onblur="checkPassword()" placeholder="  Password" /></center>
+            <center><label class="error myPassword-error"></label></center>
+            <center><input type="password" id="myConfirmPassword" onblur="checkConfirmPassword()" placeholder="  Confirm Password" /></center>
+            <center><label class="error myConfirmPassword-error"></label></center>
+            <center><input type="button" value="SIGNUP" onclick="createMyUser()"><br><br></center>
+            <div style="margin-top:30px">
+
+        </form>
+    </div>
+
+
+
+    <script>
+        function shw1()
+		{
+		document.getElementById('id01').style.display='block'
+		document.getElementById('id02').style.display='none'
+		}
+		function shw2()
+		{
+		document.getElementById('id01').style.display='none'
+		document.getElementById('id02').style.display='block'
+		}
+		
+		 
+    </script>
+
+</body>
+
+</html>
